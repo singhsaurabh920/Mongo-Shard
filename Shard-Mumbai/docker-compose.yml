@@ -3,7 +3,7 @@ services:
   mumbai-node-1:
     container_name: mumbai-node-1
     image: mongo
-    command: mongod --replSet mum --port 27017 --dbpath /data/db
+    command: mongod --shardsvr --replSet mum --port 27017 --dbpath /data/db
     ports:
       - 50001:27017
     networks:
@@ -11,7 +11,7 @@ services:
   mumbai-node-2:
     container_name: mumbai-node-2
     image: mongo
-    command: mongod --replSet mum --port 27017 --dbpath /data/db
+    command: mongod --shardsvr --replSet mum --port 27017 --dbpath /data/db
     ports:
       - 50002:27017
     networks:
@@ -19,7 +19,7 @@ services:
   mumbai-node-3:
     container_name: mumbai-node-3
     image: mongo
-    command: mongod --replSet mum --port 27017 --dbpath /data/db
+    command: mongod --shardsvr --replSet mum --port 27017 --dbpath /data/db
     ports:
       - 50003:27017
     networks:

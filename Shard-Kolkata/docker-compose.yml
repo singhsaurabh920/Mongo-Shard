@@ -3,7 +3,7 @@ services:
   kolkata-node-1:
     container_name: kolkata-node-1
     image: mongo
-    command: mongod --replSet kol --port 27017 --dbpath /data/db
+    command: mongod --shardsvr --replSet kol --port 27017 --dbpath /data/db
     ports:
       - 40001:27017
     networks:
@@ -11,7 +11,7 @@ services:
   kolkata-node-2:
     container_name: kolkata-node-2
     image: mongo
-    command: mongod --replSet kol --port 27017 --dbpath /data/db
+    command: mongod --shardsvr --replSet kol --port 27017 --dbpath /data/db
     ports:
       - 40002:27017
     networks:
@@ -19,7 +19,7 @@ services:
   kolkata-node-3:
     container_name: kolkata-node-3
     image: mongo
-    command: mongod --replSet kol --port 27017 --dbpath /data/db
+    command: mongod --shardsvr --replSet kol --port 27017 --dbpath /data/db
     ports:
       - 40003:27017
     networks:
