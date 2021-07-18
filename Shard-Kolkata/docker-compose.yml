@@ -1,27 +1,27 @@
 version: "3.9"
 services:
-  delhi-node-1:
-    container_name: delhi-node-1
+  kolkata-node-1:
+    container_name: kolkata-node-1
     image: mongo
-    command: mongod --replSet dl --port 27017 --dbpath /data/db
+    command: mongod --replSet kol --port 27017 --dbpath /data/db
     ports:
-      - 30001:27017
+      - 40001:27017
     networks:
       - kolkata
-  delhi-node-2:
-    container_name: delhi-node-2
+  kolkata-node-2:
+    container_name: kolkata-node-2
     image: mongo
-    command: mongod --replSet dl --port 27017 --dbpath /data/db
+    command: mongod --replSet kol --port 27017 --dbpath /data/db
     ports:
-      - 30002:27017
+      - 40002:27017
     networks:
       - kolkata
-  delhi-node-3:
-    container_name: delhi-node-3
+  kolkata-node-3:
+    container_name: kolkata-node-3
     image: mongo
-    command: mongod --replSet dl --port 27017 --dbpath /data/db
+    command: mongod --replSet kol --port 27017 --dbpath /data/db
     ports:
-      - 30003:27017
+      - 40003:27017
     networks:
       - kolkata
 networks:

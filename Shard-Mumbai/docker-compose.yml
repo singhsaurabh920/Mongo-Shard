@@ -1,27 +1,27 @@
 version: "3.9"
 services:
-  delhi-node-1:
-    container_name: delhi-node-1
+  mumbai-node-1:
+    container_name: mumbai-node-1
     image: mongo
-    command: mongod --replSet dl --port 27017 --dbpath /data/db
+    command: mongod --replSet mum --port 27017 --dbpath /data/db
     ports:
-      - 30001:27017
+      - 50001:27017
     networks:
       - mumbai
-  delhi-node-2:
-    container_name: delhi-node-2
+  mumbai-node-2:
+    container_name: mumbai-node-2
     image: mongo
-    command: mongod --replSet dl --port 27017 --dbpath /data/db
+    command: mongod --replSet mum --port 27017 --dbpath /data/db
     ports:
-      - 30002:27017
+      - 50002:27017
     networks:
       - mumbai
-  delhi-node-3:
-    container_name: delhi-node-3
+  mumbai-node-3:
+    container_name: mumbai-node-3
     image: mongo
-    command: mongod --replSet dl --port 27017 --dbpath /data/db
+    command: mongod --replSet mum --port 27017 --dbpath /data/db
     ports:
-      - 30003:27017
+      - 50003:27017
     networks:
       - mumbai
 networks:
