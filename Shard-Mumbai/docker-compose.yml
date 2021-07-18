@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  mumbai-node-1:
+    container_name: mumbai-node-1
+    image: mongo
+    command: mongod --replSet kol --port 27017 --dbpath /data/mongo
+    ports:
+      - 50001:27017
+    networks:
+      - mum-external
+      - mum-internal
+  mumbai-node-2:
+    container_name: mumbai-node-2
+    image: mongo
+    command: mongod --replSet kol --port 27017 --dbpath /data/mongo
+    ports:
+      - 50002:27017
+    networks:
+      - mum-external
+      - mum-internal
+  mumbai-node-3:
+    container_name: mumbai-node-3
+    image: mongo
+    command: mongod --replSet kol --port 27017 --dbpath /data/mongo
+    ports:
+      - 50003:27017
+    networks:
+      - mum-external
+      - mum-internal
+networks:
+  mum-external:
+    external: true
+    name: MUM_PUBLIC
+  mum-internal:
+    external: false
+    name: MUM_PRIVATE
