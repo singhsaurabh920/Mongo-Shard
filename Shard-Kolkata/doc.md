@@ -32,3 +32,8 @@
 
 - `rs.add(hostname, arbiterOnly)`
 - `rs.remove(hostname)`
+
+#### Connect to replicaSet cluster
+
+- `mongo --host kol/kolkata-node-1:27017,kolkata-node-2:27017,kolkata-node-3:27017`
+- `mongo  "mongodb://kolkata-node-1:27017,kolkata-node-2:27017,kolkata-node-3:27017/?compressors=disabled&gssapiServiceName=mongodb&replicaSet=kol"`

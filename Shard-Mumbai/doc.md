@@ -32,3 +32,9 @@
 
 - `rs.add(hostname, arbiterOnly)`
 - `rs.remove(hostname)`
+
+#### Connect to replicaSet cluster
+
+- `mongo --host mum/mumbai-node-1:27017,mumbai-node-2:27017,mumbai-node-3:27017`
+- `mongo  "mongodb://mumbai-node-1:27017,mumbai-node-2:27017,mumbai-node-3:27017/?compressors=disabled&gssapiServiceName=mongodb&replicaSet=mum"`
+

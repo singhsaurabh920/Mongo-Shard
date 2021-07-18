@@ -11,7 +11,7 @@
 
 ```
  rs.initiate({
-    _id: "dl",
+    _id: "del",
     version: 1,
     members: [
         { _id: 0, host : "delhi-node-1:27017" },
@@ -32,3 +32,8 @@
 
 - `rs.add(hostname, arbiterOnly)`
 - `rs.remove(hostname)`
+
+#### Connect to replicaSet cluster
+
+- `mongo --host del/delhi-node-1:27017,delhi-node-2:27017,delhi-node-3:27017`
+- `mongo  "mongodb://delhi-node-1:27017,delhi-node-2:27017,delhi-node-3:27017/?compressors=disabled&gssapiServiceName=mongodb&replicaSet=del"`
