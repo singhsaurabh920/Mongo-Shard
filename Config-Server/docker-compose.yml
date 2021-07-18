@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  config-server-1:
+    container_name: config-server-1
+    image: mongo
+    command: mongod --configsvr --replSet cfsvr --port 27017 --dbpath /data/db
+    ports:
+      - 20001:27017
+    networks:
+      - mongo-cluster
+      - delhi
+      - mumbai
+      - kolkata
+  config-server-2:
+    container_name: config-server-2
+    image: mongo
+    command: mongod --configsvr --replSet cfsvr --port 27017 --dbpath /data/db
+    ports:
+      - 20002:27017
+    networks:
+      - mongo-cluster
+      - delhi
+      - mumbai
+      - kolkata
+  config-server-3:
+    container_name: config-server-3
+    image: mongo
+    command: mongod --configsvr --replSet cfsvr --port 27017 --dbpath /data/db
+    ports:
+      - 20003:27017
+    networks:
+      - mongo-cluster
+      - delhi
+      - mumbai
+      - kolkata
+networks:
+  mongo-cluster:
+    name: "mongo-cluster"
