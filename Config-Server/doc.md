@@ -33,7 +33,7 @@
 - `rs.add(hostname, arbiterOnly)`
 - `rs.remove(hostname)`
 
-#### Connect to replicaSet cluster
+#### Connect to config server
 
 - `mongo --host cfsvr/config-server-1:27017,config-server-2:27017,config-server-3:27017`
 - `mongo  "mongodb://config-server-1:27017,config-server-2:27017,config-server-3:27017/?compressors=disabled&gssapiServiceName=mongodb&replicaSet=cfsvr"`
