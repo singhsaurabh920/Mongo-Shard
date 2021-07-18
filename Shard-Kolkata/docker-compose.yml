@@ -1,36 +1,26 @@
 version: "3.9"
 services:
-  kolkata-node-1:
-    container_name: kolkata-node-1
+  delhi-node-1:
+    container_name: delhi-node-1
     image: mongo
-    command: mongod --replSet kol --port 27017 --dbpath /data/mongo
+    command: mongod --replSet dl --port 27017 --dbpath /data/mongo
     ports:
-      - 40001:27017
+      - 30001:27017
     networks:
-      - kol-external
-      - kol-internal
-  kolkata-node-2:
-    container_name: kolkata-node-2
+      - kolkata
+  delhi-node-2:
+    container_name: delhi-node-2
     image: mongo
-    command: mongod --replSet kol --port 27017 --dbpath /data/mongo
+    command: mongod --replSet dl --port 27017 --dbpath /data/mongo
     ports:
-      - 40002:27017
+      - 30002:27017
     networks:
-      - kol-external
-      - kol-internal
-  kolkata-node-3:
-    container_name: kolkata-node-3
+      - kolkata
+  delhi-node-3:
+    container_name: delhi-node-3
     image: mongo
-    command: mongod --replSet kol --port 27017 --dbpath /data/mongo
+    command: mongod --replSet dl --port 27017 --dbpath /data/mongo
     ports:
-      - 40003:27017
+      - 30003:27017
     networks:
-      - kol-external
-      - kol-internal
-networks:
-  kol-external:
-    external: true
-    name: KOL_PUBLIC
-  kol-internal:
-    external: false
-    name: KOL_PRIVATE
+      - kolkata

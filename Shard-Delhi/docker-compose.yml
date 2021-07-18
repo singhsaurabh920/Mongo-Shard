@@ -7,8 +7,7 @@ services:
     ports:
       - 30001:27017
     networks:
-      - dl-external
-      - dl-internal
+      - delhi
   delhi-node-2:
     container_name: delhi-node-2
     image: mongo
@@ -16,8 +15,7 @@ services:
     ports:
       - 30002:27017
     networks:
-      - dl-external
-      - dl-internal
+      - delhi
   delhi-node-3:
     container_name: delhi-node-3
     image: mongo
@@ -25,12 +23,4 @@ services:
     ports:
       - 30003:27017
     networks:
-      - dl-external
-      - dl-internal
-networks:
-  dl-external:
-    external: true
-    name: DL_PUBLIC
-  dl-internal:
-    external: false
-    name: DL_PRIVATE
+      - delhi
