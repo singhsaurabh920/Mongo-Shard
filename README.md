@@ -4,7 +4,7 @@
 
 ![alt text](https://github.com/v-saurabhsingh/Mongo-Shard/blob/master/sharded-cluster-production-architecture.bakedsvg.svg?raw=true)
 
-##### In shared collection there is shared-key. This key must be involved in all read and writed operation. Based on this key query router send query to perticular shard. Shard key is very important aspect when we shard any collection. We have to identify shard key very intelligently. We have to specify that key when we enable sharding at any collection. The shard key is either a single indexed field or multiple fields covered by a compound index that determines the distribution of the collection's documents among the cluster's shards.All sharded collections must have an index that supports the shard key. The index can be an index on the shard key or a compound index where the shard key is a prefix of the index.
+In sharded collection there is shard-key. This key must be involved in all read and writed operation. Based on this key query router send query to perticular shard. Shard key is very important aspect when we shard any collection. We have to identify shard key very intelligently. We have to specify that key when we enable sharding at any collection. The shard key is either a single indexed field or multiple fields covered by a compound index that determines the distribution of the collection's documents among the cluster's shards.All sharded collections must have an index that supports the shard key. The index can be an index on the shard key or a compound index where the shard key is a prefix of the index.
 
 ### Generally there are two types of sharding key
 - #### Hashed Sharding
