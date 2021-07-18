@@ -7,7 +7,7 @@
 - `mongo --host delhi-node-1`
 
 
-####Initiate replicaSet config
+#### Initiate replicaSet config
 
 ```
  rs.initiate({
