@@ -24,3 +24,5 @@ services:
       - 30003:27017
     networks:
       - kolkata
+networks:
+  kolkata: {}
