@@ -36,3 +36,9 @@ services:
 networks:
   mongo-cluster:
     name: "mongo-cluster"
+  delhi:
+    name: "delhi"
+  mumbai:
+    name: "mumbai"
+  kolkata:
+    name: "kolkata"
