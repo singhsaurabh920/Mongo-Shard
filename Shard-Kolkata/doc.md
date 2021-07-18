@@ -11,7 +11,7 @@
 
 ```
  rs.initiate({
-    _id: "dl",
+    _id: "kol",
     version: 1,
     members: [
         { _id: 0, host : "kolkata-node-1:27017" },
@@ -24,5 +24,11 @@
 ####Check replicaSet status
 
 - `rs.status();`
-
 - `rs.conf();`
+- `rs.printReplicationInfo()`
+- `rs.printSecondaryReplicationInfo()`
+
+####Add and Remove replicaSet member
+
+- `rs.add(hostname, arbiterOnly)`
+- `rs.remove(hostname)`
