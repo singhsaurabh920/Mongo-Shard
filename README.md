@@ -10,5 +10,6 @@ In sharded collection there is shard-key. This key must be involved in all read 
   Hashed sharding uses either a single field hashed index or a compound hashed index as the shard key to partition data across your clusterRanged Sharding
 - #### Ranged Sharding
   Range-based sharding involves dividing data into contiguous ranges determined by the shard key values. In this model, documents with "close" shard key values are likely to be in   the same chunk or shard. This allows for efficient queries where reads target documents within a contiguous range. However, both read and write performance may decrease with       poor shard key selection.
-              ![alt text](https://github.com/v-saurabhsingh/Mongo-Shard/blob/master/sharded-cluster-scatter-gather-query.bakedsvg.svg?raw=true)
+  
+ ![alt text](https://github.com/v-saurabhsingh/Mongo-Shard/blob/master/sharded-cluster-scatter-gather-query.bakedsvg.svg?raw=true)
 
