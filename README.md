@@ -2,3 +2,7 @@
 
 
 ![alt text](https://github.com/v-saurabhsingh/Mongo-Shard/blob/master/sharded-cluster-production-architecture.bakedsvg.svg?raw=true)
+
+
+![alt text](https://github.com/v-saurabhsingh/Mongo-Shard/blob/master/sharded-cluster-scatter-gather-query.bakedsvg.svg?raw=true)
+
