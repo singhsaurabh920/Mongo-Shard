@@ -7,7 +7,7 @@
 - `mongo --host kolkata-node-1`
 
 
-####Initiate replicaSet config
+#### Initiate replicaSet config
 
 ```
  rs.initiate({
@@ -21,14 +21,14 @@
 })
 ```
 
-####Check replicaSet status
+#### Check replicaSet status
 
 - `rs.status();`
 - `rs.conf();`
 - `rs.printReplicationInfo()`
 - `rs.printSecondaryReplicationInfo()`
 
-####Add and Remove replicaSet member
+#### Add and Remove replicaSet member
 
 - `rs.add(hostname, arbiterOnly)`
 - `rs.remove(hostname)`
