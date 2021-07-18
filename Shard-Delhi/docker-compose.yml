@@ -25,4 +25,5 @@ services:
     networks:
       - delhi
 networks:
-  delhi: {}
+  delhi:
+    name: "delhi"

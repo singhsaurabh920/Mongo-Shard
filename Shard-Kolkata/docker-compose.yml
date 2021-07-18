@@ -25,4 +25,5 @@ services:
     networks:
       - kolkata
 networks:
-  kolkata: {}
+  kolkata:
+    name: "kolkata"
